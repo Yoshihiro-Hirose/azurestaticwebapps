@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     },
     body: JSON.stringify([
       {
-        content: '米を買う',
+        content: '白米を買う',
         done: false
       },
       {
