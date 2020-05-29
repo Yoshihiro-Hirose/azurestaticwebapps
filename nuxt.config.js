@@ -3,8 +3,6 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   mode: 'spa',
 
-  serverMiddleware: ['~/api/'],
-
   /*
    ** Headers of the page
    */
@@ -53,7 +51,7 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: { baseURL: '/' },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

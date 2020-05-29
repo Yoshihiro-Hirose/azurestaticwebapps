@@ -12,9 +12,9 @@
           <v-list-item-action>
             <v-checkbox v-model="todo.done" color="primary" />
           </v-list-item-action>
-          <v-list-content>
+          <v-list-item-content>
             <v-list-item-title>{{ todo.content }}</v-list-item-title>
-          </v-list-content>
+          </v-list-item-content>
           <v-spacer />
           <v-icon v-if="todo.done" color="success">
             mdi-check-bold
@@ -29,7 +29,7 @@
 <script>
 export default {
   async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/todos')
+    const { data } = await $axios.get('/.netlify/functions/getTodos')
     return { todos: data }
   },
   data() {
